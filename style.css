@@ -7,6 +7,8 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Fenix', serif;
+	background: url(img/background.png) no-repeat center center fixed;
+	background-size: cover;
 }
 
 /*---------------------------------------------------------------------
@@ -20,8 +22,10 @@ header {
 h1 {
 	text-align: center; /*текст по центру*/
 	margin-top: 200px; /*отступ сверху*/
-	font-size: 58px; /*размер*/
-	letter-spacing: 10px; /*расстояние между буквами*/
+	font-size: 68px; /*размер*/
+	letter-spacing: 12px; /*расстояние между буквами*/
+	color: #fff;
+	text-shadow: 1px 1px 2px black, 0 0 1em green;
 }
 
 nav {
@@ -35,10 +39,11 @@ ul {
 }
 
 a {
-	color: #000;
+	color: #fff;
 	font-size: 28px;
 	text-decoration: none;
 	margin: 12px;
+	text-shadow: 1px 1px 2px black
 }
 
 
@@ -97,6 +102,57 @@ footer
 footer {
 	margin-top: 500px;
 	width: 100%;
-	height: 613px;
+	height: 213px;
 	background: black;
+}
+
+footer .social {
+	color: #fff;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	width: 350px;
+	margin: 0 auto;
+}
+
+footer .social__item {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 5px solid #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	transition: 0.3s;
+	margin-top: 50px;
+}
+
+.whatsapp:hover {
+	border-color: #4dc247;
+	box-shadow: 0px 0px 55px #4dc247;
+	color: #4dc247;
+	transition: all 0.3s;
+}
+
+.vk:hover {
+	border-color: #3d5afe;
+	box-shadow: 0px 0px 55px #3d5afe;
+	color: #3d5afe;
+	transition: all 0.3s;
+}
+
+.twitter:hover {
+	border-color: #00aced;
+	box-shadow: 0px 0px 55px #00aced;
+	color: #00aced;
+	transition: all 0.3s;
+}
+
+.instagram:hover {
+	border-color: #bc2a8d;
+	box-shadow: 0px 0px 55px #bc2a8d;
+	color: #bc2a8d;
+	transition: all 0.3s;
 }
