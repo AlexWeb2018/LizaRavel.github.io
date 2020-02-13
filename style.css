@@ -29,7 +29,7 @@ h1 {
 }
 
 nav {
-	position: absolute;
+	position: fixed;
 	top: 10px;
 	right: 30px;
 }
@@ -47,12 +47,88 @@ a {
 }
 
 
+.menu-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: fixed;
+  top: 1%;
+  right: 1%;
+}
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  position: absolute;
+  top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: #222;
+}
+.menu-btn span::before,
+.menu-btn span::after {
+  content: '';
+  display: block;
+  transition: 0.2s;
+}
+.menu-btn span::before {
+  transform: translateY(-5px);
+}
+.menu-btn span::after {
+  transform: translateY(5px);
+}
+
+.menu-btn_active span:before {
+  transform: rotate(-35deg);
+  width: 10px;
+  transform-origin: left bottom;
+}
+.menu-btn_active span:after {
+  transform: rotate(35deg);
+  width: 10px;
+  transform-origin: left top;
+}
+.menu-block {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 100;
+  display: inline-block;
+  margin-right: 20px;
+  transition: 1s;
+}
+.menu-nav {
+  transition: 0.2s;
+  transform: scaleX(0) translateX(0%);
+  transform-origin: right center;
+  opacity: 0;
+  visibility: hidden;
+  height: 25px;
+  line-height: 40px;
+  padding-right: 52px;
+  padding-left: 25px;
+  margin-right: -5px;
+}
+.menu-nav_active {
+  transform: scaleX(1) translateX(0%);
+  opacity: 1;
+  visibility: visible;
+}
+
+
 /*---------------------------------------------------------------------
 content
 ---------------------------------------------------------------------*/
 
 .content {
-	width: 90%;
+	width: 85%;
 	height: 713px;
 	background: #9CB58E;
 	margin: 0 auto;
@@ -96,14 +172,22 @@ p {
 	line-height: 32px;
 }
 
+
+@media screen and (max-width: 1400px) {
+	.content {
+		height: auto;
+	}
+}
+
+	
+
 /*---------------------------------------------------------------------
 footer
 ---------------------------------------------------------------------*/
 footer {
 	margin-top: 500px;
 	width: 100%;
-	height: 213px;
-	background: black;
+	height: 113px;
 }
 
 footer .social {
@@ -111,48 +195,38 @@ footer .social {
 	list-style: none;
 	padding: 0;
 	display: flex;
-	justify-content: space-between;
-	width: 350px;
-	margin: 0 auto;
+	flex-direction: column;
+	width: 80px;
+	float: right;
 }
 
 footer .social__item {
 	width: 50px;
 	height: 50px;
-	border-radius: 50%;
-	border: 5px solid #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 20px;
+	font-size: 34px;
 	transition: 0.3s;
-	margin-top: 50px;
+	margin: 6px 5px;
 }
 
 .whatsapp:hover {
-	border-color: #4dc247;
-	box-shadow: 0px 0px 55px #4dc247;
 	color: #4dc247;
 	transition: all 0.3s;
 }
 
 .vk:hover {
-	border-color: #3d5afe;
-	box-shadow: 0px 0px 55px #3d5afe;
 	color: #3d5afe;
 	transition: all 0.3s;
 }
 
-.twitter:hover {
-	border-color: #00aced;
-	box-shadow: 0px 0px 55px #00aced;
+.twitter:hover {	
 	color: #00aced;
 	transition: all 0.3s;
 }
 
 .instagram:hover {
-	border-color: #bc2a8d;
-	box-shadow: 0px 0px 55px #bc2a8d;
 	color: #bc2a8d;
 	transition: all 0.3s;
 }
