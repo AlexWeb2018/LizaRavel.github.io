@@ -19,12 +19,23 @@
 			      <a href="#">Contacts</a>
 			    </nav>
     
-    <a href="#" class="menu-btn">
-      <span></span>
-    </a>
+					    <a href="#" class="menu-btn">
+					      <span></span>
+					    </a>
     
-  </div>
-</div>
+  			</div>
+		</div>
+		<ul class="social">
+				<li class="social__item whatsapp">
+					<i class="fa fa-whatsapp"></i>
+				</li>
+				<li class="social__item vk">
+					<i class="fa fa-vk"></i>
+				</li>
+				<li class="social__item instagram">
+					<i class="fa fa-instagram"></i>
+				</li>
+			</ul>
 	</header>
 	<section class="content">
 		<div class="box">
@@ -37,24 +48,39 @@
 			<p>I’m quiet young (to be exact 18 y’o). Used to live in small town Togliatty, but now i live in Moscow and study programming at Moscow Polytechnic University. I can’t say that i wanted to study there and try hard passing my exams... No, no, not at all c: My main purpose was to enter a little bit of good university to have free time for my own things, like, for playing games and self-education. Sooo, it was very long inception and now, the main thing - im practising making a web sites. This is the first one - only one page :c I spent so much time to look it really cool (choosing colours, making pecil schemes, editting photos) and this is the result</p>
 		</div>
 	</section>
+
+	<section class="gallery">
+		<div class="text"><h2>My Photo</h2></div>
+		<div class="wrapper">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+	</section>
+
+
+
+
+
 	<footer id="contacts">
-			<ul class="social">
-				<li class="social__item whatsapp">
-					<i class="fa fa-whatsapp"></i>
-				</li>
-				<li class="social__item vk">
-					<i class="fa fa-vk"></i>
-				</li>
-				<li class="social__item twitter">
-					<i class="fa fa-twitter"></i>
-				</li>
-				<li class="social__item instagram">
-					<i class="fa fa-instagram"></i>
-				</li>
-		</ul>
 	</footer>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="main.js"></script>
+	<script type="text/javascript">
+	$(window).on("scroll", function() {
+		if($(window).scrollTop()>100) {
+			$('.menu-btn').addClass('black');
+		}
+		else {
+			$('.menu-btn').removeClass('black');
+		}
+	});
+</script>
 </body>
 </html>
