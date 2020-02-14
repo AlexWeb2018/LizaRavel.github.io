@@ -194,6 +194,7 @@ header .social__item {
 
 .text {
 	margin-top: 0;
+	margin: 10px;
 }
 
 .content .box .image {
@@ -226,8 +227,17 @@ p {
 	.content {
 		height: auto;
 	}
+	.content .text {
+		padding-bottom: 5%;
+	}
+	.content .box .image {
+		width: 300px;
+		height: 300px;
+	}
+	.content .box {
+		margin: 10px;
+	}
 }
-
 /*---------------------------------------------------------------------
 /galerry
 ---------------------------------------------------------------------*/	
